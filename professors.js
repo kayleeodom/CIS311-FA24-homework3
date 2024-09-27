@@ -45,7 +45,7 @@ export const professors = [
       department: "Photography",
       dob: "4-1-1975",
       title: "MFA.",
-      imageUrl: "casey_kenan.jpg",
+      imageUrl: "davis_jud.jpg",
     },
     {
       id: 7,
@@ -53,7 +53,7 @@ export const professors = [
       department: "Chemistry",
       dob: "4-1-1976",
       title: "Ph.D.",
-      imageUrl: "casey_kenan.jpg",
+      imageUrl: "davis_leann.jpg",
     },
     {
       id: 8,
@@ -76,7 +76,7 @@ export const professors = [
       name: "Nathan Judd",
       department: "University Counseling Center",
       dob: "4-1-1984",
-      title: "Ph.D.",
+      title: "M.S.",
       imageUrl: "judd_nathan.jpg",
     },
     {
