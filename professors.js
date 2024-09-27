@@ -44,7 +44,7 @@ export const professors = [
       name: "Jud Davis",
       department: "Photography",
       dob: "4-1-1975",
-      title: "Ph.D.",
+      title: "MFA.",
       imageUrl: "casey_kenan.jpg",
     },
     {
