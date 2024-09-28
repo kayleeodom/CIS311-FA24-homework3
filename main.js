@@ -47,4 +47,30 @@ guessButton.addEventListener('click', (event)=> {
 })
 
 
+// Get each slider and corresponding number input by their unique IDs
+const dateSlider = document.getElementById('date-slider');
+const dateNumber = document.getElementById('date-number');
+
+const monthSlider = document.getElementById('month-slider');
+const monthNumber = document.getElementById('month-number');
+
+const yearSlider = document.getElementById('year-slider');
+const yearNumber = document.getElementById('year-number');
+
+// Sync Date slider with number input
+dateSlider.addEventListener('input', function() {
+    dateNumber.value = dateSlider.value;
+});
+
+// Sync Month slider with number input
+monthSlider.addEventListener('input', function() {
+    monthNumber.value = monthSlider.value;
+});
+
+// Sync Year slider with number input
+yearSlider.addEventListener('input', function() {
+    yearNumber.value = yearSlider.value;
+});
+
+
 

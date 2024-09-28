@@ -2,8 +2,72 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-img {
-    max-width: 100%;
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+header {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    background-color: #661424;
+    color: white;
+    padding: 8px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    /* align-items: center; */
+}
+
+main img {
+    /* width: 45%;
+    height: auto; */
+    border-radius: 10px;
+}
+
+.two {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.age {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+/*
+footer {
+    background-color: #661424;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+} */
