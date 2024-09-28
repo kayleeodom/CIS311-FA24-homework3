@@ -48,29 +48,63 @@ guessButton.addEventListener('click', (event)=> {
 
 
 // Get each slider and corresponding number input by their unique IDs
-const dateSlider = document.getElementById('date-slider');
-const dateNumber = document.getElementById('date-number');
+const dateSlider = document.getElementById('date-slider')
+const dateNumber = document.getElementById('date-number')
 
-const monthSlider = document.getElementById('month-slider');
-const monthNumber = document.getElementById('month-number');
+const monthSlider = document.getElementById('month-slider')
+const monthNumber = document.getElementById('month-number')
 
-const yearSlider = document.getElementById('year-slider');
-const yearNumber = document.getElementById('year-number');
+const yearSlider = document.getElementById('year-slider')
+const yearNumber = document.getElementById('year-number')
 
 // Sync Date slider with number input
 dateSlider.addEventListener('input', function() {
-    dateNumber.value = dateSlider.value;
-});
+    dateNumber.value = dateSlider.value
+})
 
 // Sync Month slider with number input
 monthSlider.addEventListener('input', function() {
-    monthNumber.value = monthSlider.value;
-});
+    monthNumber.value = monthSlider.value
+    // updateDateSliderMax()
+})
 
 // Sync Year slider with number input
 yearSlider.addEventListener('input', function() {
-    yearNumber.value = yearSlider.value;
-});
+    yearNumber.value = yearSlider.value
+    updateDateSliderMax()
+})
+
+function updateDateSliderMax() {
+    const month = parseInt(monthSlider.value)
+    const year = parseInt(yearSlider.value)
+
+    let maxDays
+
+    switch (month) {
+        case 2:
+            if((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                maxDays = 29
+            }
+            else {
+                maxDays = 28
+            }
+            break
+        case 4: case 6: case 9: case 11:
+            maxDays = 30
+            break
+        default:
+            maxDays = 31
+            break
+    }
+
+    dateSlider.max = maxDays
+
+    // To make sure the date value doesn't exceed the new max
+    if (parseInt(dateSlider.value) > maxDays) {
+        dateSlider.value = maxDays
+        dateNumber.value = maxDays
+    }
+}
 
 
 

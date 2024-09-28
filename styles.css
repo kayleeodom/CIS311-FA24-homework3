@@ -25,14 +25,13 @@ main {
     display: flex;
     flex-direction: column;
     margin: 1rem;
-    /* align-items: center; */
 }
 
-main img {
-    /* width: 45%;
-    height: auto; */
+/* main img {
     border-radius: 10px;
-}
+    width: 50%;
+    height: auto;
+} */
 
 .two {
     display: flex;

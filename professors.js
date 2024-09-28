@@ -53,7 +53,7 @@ export const professors = [
       department: "Chemistry",
       dob: "4-1-1976",
       title: "Ph.D.",
-      imageUrl: "davis_leann.jpg",
+      imageUrl: "davis_leanne.jpg",
     },
     {
       id: 8,
