@@ -1,7 +1,8 @@
 import {professors} from "./professors.js"
 
-const guesses = [];
+// const guesses = [];
 const MAX_GUESSES = 5;
+let numberOfGuesses = MAX_GUESSES
 
 let IsGameOver = false;
 let DidWin = false;
@@ -12,13 +13,16 @@ const professorImage = document.getElementById("professorImage")
 const professorDepartment = document.getElementById("professorDept")
 const guessButton = document.getElementById("guessButton")
 const guessTextbox = document.getElementById("age")
+const guessesLeft = document.getElementById("guessesLeft")
+
+let currentProfessor
 
 getRandomProfessor()
 
 function getRandomProfessor() 
 {
     let randomIndex =  Math.floor( Math.random() * professors.length)
-    let currentProfessor = professors[randomIndex]
+    currentProfessor = professors[randomIndex]
     updateProfessor( currentProfessor )
 }
 
@@ -30,21 +34,60 @@ function updateProfessor( professor )
     professorImage.src = imageBasePath + professor.imageUrl
 }
 
-guessButton.addEventListener('click', (event)=> {
-    event.preventDefault()
+// guessButton.addEventListener('click', (event)=> {
+//     event.preventDefault()
 
-    const guess = guessTextbox.value
-    console.log(guess)
+//     // const guess = guessTextbox.value
+//     // console.log(guess)
+
+//     // show correct or incorrect 
+//     // show too high or too low
+
+//     // decrease number of guesses 
+
+//     // update the history
+
+// })
+
+guessButton.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    // Get the values from the sliders for the user's guess
+    const guessedDate = parseInt(dateSlider.value)
+    const guessedMonth = parseInt(monthSlider.value)
+    const guessedYear = parseInt(yearSlider.value)
+
+    // Get the professor's DOB and split it into date, month, and year
+    const [profMonth, profDate, profYear] = currentProfessor.dob.split('-').map(Number)
+
+    const inputBox = document.getElementById("input")
 
     // show correct or incorrect 
-
     // show too high or too low
+    // Compare the guess with the professor's actual DOB
+    if (guessedDate === profDate && guessedMonth === profMonth && guessedYear === profYear) {
+        inputBox.value = "Correct! You guessed the professor's birthdate!"
+        // You can also set `DidWin = true;` or handle a win scenario here.
+    } else if (guessedYear > profYear || (guessedYear === profYear && guessedMonth > profMonth) || 
+               (guessedYear === profYear && guessedMonth === profMonth && guessedDate > profDate)) {
+        inputBox.value = "Too high! Try a lower date."
+    } else {
+        inputBox.value = "Too low! Try a higher date."
+    }
 
-    // decrease number of guesses 
+    // Decrease the number of guesses
+    numberOfGuesses--
+    guessesLeft.textContent = numberOfGuesses
 
-    // update the history
+    // If no guesses left, end the game
+    if (numberOfGuesses === 0) {
+        inputBox.value = "Game over! No guesses left."
+        guessButton.disabled = true // Disable the button after game over
+    }
 
-})
+    // Clear the input field after the guess
+    guessTextbox.value = ''
+});
 
 
 // Get each slider and corresponding number input by their unique IDs
@@ -65,7 +108,7 @@ dateSlider.addEventListener('input', function() {
 // Sync Month slider with number input
 monthSlider.addEventListener('input', function() {
     monthNumber.value = monthSlider.value
-    // updateDateSliderMax()
+    updateDateSliderMax()
 })
 
 // Sync Year slider with number input

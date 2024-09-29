@@ -6,7 +6,7 @@
 }
 
 body {
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,11 +27,26 @@ main {
     margin: 1rem;
 }
 
-/* main img {
+main .one .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main .one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main img {
     border-radius: 10px;
-    width: 50%;
+    width: 55%;
     height: auto;
-} */
+}
 
 .two {
     display: flex;
@@ -56,7 +71,7 @@ main {
     gap: .5rem;
 }
 
-/*
+
 footer {
     background-color: #661424;
     color: white;
@@ -69,4 +84,4 @@ footer {
 footer p {
     margin: 0;
     text-align: center;
-} */
+}

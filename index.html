@@ -16,14 +16,17 @@
 
     <main>
         <section class="one">
-            <div class="image">
-                <img src="" alt="" id="professorImage">
+            <h2 id="professorName">Kevin Moore</h2>
+            <img src="" alt="" id="professorImage">
+            <h3 id="professorDept">Bible</h3>
+
+            <!-- <div class="image">
             </div>
 
-            <div class="text"></div>
+            <div class="description">
                 <h2 id="professorName">Kevin Moore</h2>
                 <h3 id="professorDept">Bible</h3>
-            </div>
+            </div> -->
         </section>
 
         <section class="two">
@@ -70,29 +73,22 @@
                 <div class="guesses-left"></div>
                     <p>Guesses Left: <span id="guessesLeft">5</span></p>
                 </div>
+
+                <div>
+                    
+                </div>
                 
                 <div class="buttons">
-                    <button>Guess</button>
+                    <button id="guessButton">Guess</button>
+                </div>
+                
+                <div class="textbox">
+                    <label for="Updates"></label>
+                    <input type="text" id="input" maxlength="200" class="box" readonly>
                 </div>
             </div>
 
             <div class="history" id="history"></div>
-                
-            </div>
-
-            <!-- <form action="">
-
-                <input type="number" name="age" id="age">
-
-                <input type="submit" value="Guess" id="guessButton">
-
-            </form> -->
-
-            <div class="textbox">
-                <label for="question"></label>
-                <input type="text" id="input" maxlength="200" class="box">
-            </div>
-
             <!-- <div class="correct">
                 <label for="correct-slider"></label>
                 <input type="range" id="correct-slider" min="0" max="100" value="50">
