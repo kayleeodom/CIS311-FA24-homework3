@@ -40,6 +40,8 @@ main .one {
     justify-content: center;
     align-items: center;
     width: 100%;
+    gap: 4px;
+    padding-bottom: .8rem;
 }
 
 main img {
@@ -71,6 +73,10 @@ main img {
     gap: .5rem;
 }
 
+.box {
+    width: 200px;
+    text-align: center;
+}
 
 footer {
     background-color: #661424;
