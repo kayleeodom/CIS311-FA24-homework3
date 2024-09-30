@@ -10,15 +10,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #d5d5d5;
 }
 
 header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
+    align-items: center;
     font-size: 24px;
-    text-align: center;
     background-color: #661424;
     color: white;
     padding: 8px;
+}
+
+.material-symbols-outlined {
+    font-size: 50px;
 }
 
 main {
@@ -52,9 +60,10 @@ main img {
 main .info {
     width: 55%;
     text-align: center;
-    background-color: #abb8c3;
-    padding: 4px;
+    background-color: rgb(102, 20, 36, .8);
+    padding: 6px;
     border-radius: 0 0 10px 10px;
+    color: white;
 }
 
 .two {
@@ -63,6 +72,7 @@ main .info {
     gap: 0.5rem;
     justify-content: space-between;
     text-align: center;
+    align-items: center;
 }
 
 .age {
@@ -80,9 +90,21 @@ main .info {
     gap: .5rem;
 }
 
+.buttons button {
+    font-size: 15px;
+    padding: 6px;
+    background-color: rgb(102, 20, 36, .8);
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+
 .box {
     width: 300px;
     text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    display: none;
 }
 
 footer {

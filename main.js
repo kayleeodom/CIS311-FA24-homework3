@@ -14,6 +14,7 @@ const professorDepartment = document.getElementById("professorDept")
 const guessButton = document.getElementById("guessButton")
 const guessTextbox = document.getElementById("age")
 const guessesLeft = document.getElementById("guessesLeft")
+const textbox = document.getElementById('input')
 
 let currentProfessor
 
@@ -51,6 +52,8 @@ function updateProfessor( professor )
 
 guessButton.addEventListener('click', (event) => {
     event.preventDefault();
+
+    textbox.style.display = 'flex'
 
     // Get the values from the sliders for the user's guess
     const guessedDate = parseInt(dateSlider.value)

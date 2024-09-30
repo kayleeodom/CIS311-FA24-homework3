@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homework3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
     <header>
+        <span class="material-symbols-outlined">
+            calendar_month
+        </span>
         <h1>Date Your Prof</h1>
+        <span class="material-symbols-outlined">
+            menu
+        </span>
 
     </header>
 
@@ -38,7 +49,7 @@
                         <div class="text">
                             <h3>Month</h3>
                             <label for="month-number"></label>
-                            <input type="number" id="month-number" min="1" max="12" value="12" class="number-box"  readonly>
+                            <input type="number" id="month-number" min="1" max="12" value="12" class="number-box">
                         </div>
                         <label for="month-slider"></label>
                         <input type="range" id="month-slider" min="1" max="12" value="12" class="vertical-slider">
@@ -51,7 +62,7 @@
                         <div class="text">
                             <h3>Date</h3>
                             <label for="date-number"></label>
-                            <input type="number" id="date-number" min="1" max="31" value="12" class="number-box" readonly>
+                            <input type="number" id="date-number" min="1" max="31" value="12" class="number-box">
                         </div>
                         <label for="date-slider"></label>
                         <input type="range" id="date-slider" min="1" max="31" value="12" class="vertical-slider">
@@ -64,7 +75,7 @@
                         <div class="text">
                             <h3>Year</h3>
                             <label for="year-number"></label>
-                            <input type="number" id="year-number" min="1920" max="2024" value="1980" class="number-box"  readonly>
+                            <input type="number" id="year-number" min="1920" max="2024" value="1980" class="number-box">
                         </div>
                         <label for="year-slider"></label>
                         <input type="range" id="year-slider" min="1920" max="2024" value="1980" class="vertical-slider">
