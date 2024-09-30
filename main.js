@@ -81,7 +81,7 @@ guessButton.addEventListener('click', (event) => {
 
     // If no guesses left, end the game
     if (numberOfGuesses === 0) {
-        inputBox.value = "Game over! No guesses left."
+        alert("Game over! No guesses left.")
         guessButton.disabled = true // Disable the button after game over
     }
 
