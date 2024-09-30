@@ -40,14 +40,21 @@ main .one {
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 4px;
     padding-bottom: .8rem;
 }
 
 main img {
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     width: 55%;
     height: auto;
+}
+
+main .info {
+    width: 55%;
+    text-align: center;
+    background-color: #abb8c3;
+    padding: 4px;
+    border-radius: 0 0 10px 10px;
 }
 
 .two {
